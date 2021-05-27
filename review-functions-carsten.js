@@ -47,12 +47,11 @@ typeOfLastItem([1, "item", true]);
 
 // 7. Write an arrow function that takes in an array and *returns* true, if all items in that array have the same type.
 const sameItemType = (array4) => {
-  if (
-    typeof array4[0] === typeof array4[1] &&
-    typeof array4[1] === typeof array4[2] &&
-    typeof array4[0] === typeof array4[2]
-  ) {
-    return true;
+  for (let i = 0; i < array4.length - 1; i++) {
+    if (typeof array4[i] === typeof array4[i + 1]) {
+      return true;
+    }
+    return false;
   }
 };
 sameItemType(["item", "item", "item"]);
