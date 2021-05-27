@@ -58,16 +58,16 @@ const sameItemType = (array4) => {
 sameItemType(["item", "item", "item"]);
 
 // 8. Print the `type` of a variable that has a normal function value.
-function normalFunction() {
+const normalFunction = function () {
   return "That's normal";
-}
-console.log(typeof normalFunction());
+};
+console.log(typeof normalFunction);
 
 // 9. Print the `type` of a variable that has an arrow function value.
 const arrowFunction = () => {
   return "That's an arrow function";
 };
-console.log(typeof arrowFunction());
+console.log(typeof arrowFunction);
 
 // 10. Write and test a function that takes in two parameters (min and max).
 // That function should return another function that doesn't take in any parameters,
