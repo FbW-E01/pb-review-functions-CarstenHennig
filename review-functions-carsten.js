@@ -50,11 +50,24 @@ const sameItemType = (array4) => {
   for (let i = 0; i < array4.length - 1; i++) {
     if (typeof array4[i] === typeof array4[i + 1]) {
       return true;
+    } else {
+      return false;
     }
-    return false;
   }
 };
-sameItemType(["item", "item", "item"]);
+sameItemType(["item", "item", "item", "item", 2, false, true]);
+
+const arr1 = ["string", "item1", "item2", "item3", "item4"];
+const arr2 = ["string", 2, "item1", "item2", "item3"];
+
+const checkItems = (item) => {
+  return typeof item === typeof arr1[0];
+};
+console.log(arr1.every(checkItems));
+
+const chkIt = (array) =>
+  array.every((currentValue) => typeof currentValue === typeof array[0]);
+console.log(chkIt(arr2));
 
 // 8. Print the `type` of a variable that has a normal function value.
 const normalFunction = function () {
